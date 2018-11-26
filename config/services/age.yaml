@@ -1,0 +1,13 @@
+services:
+  app.age.manager:
+    public: true
+    class: App\Age\Manager
+    arguments:
+    - "@app.age.age_calculator"
+    - "@app.age.age_limit"
+
+  app.age.age_calculator:
+    class: App\Age\AgeCalculator
+
+  app.age.age_limit:
+    class: App\Age\AgeLimit
